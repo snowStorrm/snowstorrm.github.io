@@ -1,0 +1,52 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    background: #39a7fa;
+    list-style-type: none;
+    overflow: hidden;
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 0 7px black;
+}
+li {
+    display: inline-block;
+}
+li a {
+    background-color: #39a7fa;
+    padding: 25px 20px;
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: white;
+    font-weight: normal;
+}
+li a:hover {
+    background-color: #2d88cc;
+}
+canvas {
+    display: block;
+}
+div.project {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #438fe6;
+    padding: 100px;
+    display: inline-block;
+    width: 100%;
+}
+.button {
+    display: inline-block;
+    padding: 25px 20px;
+    background-color: #39a7fa;
+    text-decoration: none;
+    color: white;
+    font-size: large;
+}
+.button:hover {
+    background-color: #2d88cc;
+}
