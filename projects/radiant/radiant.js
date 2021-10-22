@@ -19,7 +19,7 @@ function draw() {
     }
 }
 function mousePressed() {
-    quarks.push(new outQuark(createVector(random(0,width), height), 10);
+    quarks.push(new outQuark(createVector(random(0,width), height), 10));
 }
 
 class outQuark {
