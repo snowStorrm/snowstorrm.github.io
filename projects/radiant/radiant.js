@@ -13,7 +13,6 @@ function draw() {
         if (i.vis = 0) {
             let index = quarks.indexOf(i);
             quarks.splice(index, 1);
-            console.log("test");
             continue;
         }
         i.show();
@@ -28,13 +27,18 @@ class outQuark {
         this.pos = origin;
         this.vel = createVector();
         this.acc = createVector();
-        this.dir = 0;
         this.vis = 255;
         this.size = size;
     }
     update() {
         this.vis--;
-
+        this.acc.mult(0);
+        this.acc = p5.Vector.random2D();
+        this.acc.normalize;
+        this.acc.mult(deltaTime * 10);
+        this.vel.add(this.acc);
+        this.vel.limit(2);
+        this.pos.add(this.vel);
     }
     show() {
         stroke(map(this.vis, 0, 255, 60, -235), 255, this.vis);
