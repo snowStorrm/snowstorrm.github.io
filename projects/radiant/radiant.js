@@ -1,7 +1,7 @@
 
 let quarks = [];
 function setup() {
-    colorMode(HSB);
+    colorMode(HSB, 255);
     createCanvas(windowWidth, windowHeight);
 }
 function windowResized() {
@@ -13,13 +13,14 @@ function draw() {
         if (i.vis = 0) {
             let index = quarks.indexOf(i);
             quarks.splice(index, 1);
+            console.log("test");
             continue;
         }
         i.show();
     }
 }
 function mousePressed() {
-    quarks.push(new outQuark(createVector(random(0,width), height), 10));
+    quarks.push(new outQuark(createVector(random(width), height), 10));
 }
 
 class outQuark {
@@ -32,16 +33,8 @@ class outQuark {
         this.size = size;
     }
     update() {
-        this.dir = radians(random(0, 180));
-        this.acc.setHeading(this.dir);
-        this.acc.normalize();
-        this.acc.limit(0.2);
-        this.acc.mult(deltaTime * 1000);
-        this.vel.add(this.acc);
-        this.vel.limit(4);
-        this.vel.mult(deltaTime * 1000);
-        this.pos.add(this.vel);
-        this.acc.mult(0);
+        this.vis--;
+
     }
     show() {
         stroke(map(this.vis, 0, 255, 60, -235), 255, this.vis);
