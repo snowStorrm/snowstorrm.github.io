@@ -1,7 +1,9 @@
 function setup() {
     colorMode(HSB, 255);
-    createCanvas(windowWidth * 0.25, windowHeight);
+    let canvas = createCanvas(windowWidth * 0.25, windowHeight);
+    canvas.position(0, 0);
 }
 function windowResized() {
-    resizeCanvas(windowWidth * 0.25, windowHeight);
+    let canvas = resizeCanvas(windowWidth * 0.25, windowHeight);
+    canvas.position(0, 0);
 }

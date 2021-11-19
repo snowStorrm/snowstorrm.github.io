@@ -2,10 +2,12 @@
 let quarks = [];
 function setup() {
     colorMode(HSB, 255);
-    createCanvas(windowWidth * 0.5, windowHeight);
+    let canvas = createCanvas(windowWidth * 0.5, windowHeight);
+    canvas.position(windowWidth * 0.25, 0);
 }
 function windowResized() {
-    resizeCanvas(windowWidth * 0.5, windowHeight);
+    let canvas = resizeCanvas(windowWidth * 0.5, windowHeight);
+    canvas.position(windowWidth * 0.25, 0);
 }
 function draw() {
     background(228, 19, 18);
