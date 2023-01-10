@@ -1,0 +1,157 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overscroll-behavior: none;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+main {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: fixed;
+    background-color: #191919;
+}
+canvas {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    filter: blur(0px);
+    overflow: hidden;
+}
+h1 {
+    width: 45%;
+    height: auto;
+    opacity: 0%;
+    position: absolute;
+    overflow: hidden;
+    z-index: 1;
+    font-family: Poppins, sans-serif;
+    font-size: 64px;
+    color: white;
+    animation-name: fadeInOut;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+img.scroll {
+    position: absolute;
+    width: 2.5%;
+    top: 87.5%;
+    left: calc(50% - 1.25%);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 3;
+    animation-name: upDown;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+.snow {
+    text-align: right;
+    left: calc(5% - 5px);
+    animation-delay: 0s;
+}
+.storrm {
+    left: calc(50% + 5px);
+    animation-delay: 0.75s;
+}
+.ryan {
+    text-align: right;
+    left: calc(5% - 5px);
+    animation-delay: 3.0s;
+}
+.zucker {
+    left: calc(50% + 5px);
+    animation-delay: 3.75s;
+}
+div.box {
+    position: absolute;
+    display: inline-block;
+    width: 97.5%;
+    background: #262626;
+    z-index: 3;
+    margin: 1.25%;
+    border-radius: 25px;
+    padding: 10px 0 10px 0;
+    filter: drop-shadow(0 0 5px #262626);
+}
+div.boxTitle {
+    font-family: Poppins, sans-serif;
+    font-weight: 800;
+    letter-spacing: 3px;
+    font-size: 64pt;
+    position: relative;
+    color: white;
+    width: min-content;
+    left: 5%;
+    top: 15px;
+}
+div.projBox {
+    position: inherit;
+    left: 5%;
+    width: 67%;
+    font-family: Poppins, sans-serif;
+}
+div.projTitle {
+    font-size: 42pt;
+    color: white;
+    width: 50%;
+    height: 42pt;
+    padding: 0 10px 0 10px;
+    background-color: #0094ff;
+
+}
+div.projDesc {
+    font-size: 18pt;
+    color: #cccccc;
+    width: 75%;
+    height: 100%;
+
+}
+img.projImg {
+    height: 75%;
+    position: inherit;
+    float: right;
+    transform: translate(0, calc(-75%/2));
+    top: 50%;
+    left: 100%;
+}
+div.textBox {
+    position: relative;
+    font-family: Poppins, sans-serif;
+    text-indent: 5%;
+    font-size: 18pt;
+    color: #cccccc;
+    left: 7.5%;
+    width: 85%;
+}
+div.bottomBar {
+    z-index: 3;
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    background: #262626;
+}
+div.discord {
+    position: relative;
+    height: 75%;
+    top: 12.5%;
+    left: calc(95% - 100px);
+}
+@keyframes fadeInOut {
+    0% {top: 20%; opacity: 0%;}
+    25% {top: 20%; opacity: 0%;}
+    50% {top: 35%; opacity: 100%;}
+    75% {top: 35%; opacity: 100%;}
+    100% {top: 50%; opacity: 0%;}
+}
+@keyframes upDown {
+    0% {top: 87.5%}
+    50% {top: 92.5%}
+    100% {top: 87.5%}
+}
