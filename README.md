@@ -1,2 +1,2 @@
 # snowstorrm.github.io
-github pages repo
+This is the place where my web page is hosted.
