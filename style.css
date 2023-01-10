@@ -100,11 +100,14 @@ div.projBox {
 div.projTitle {
     font-size: 42pt;
     color: white;
-    width: 50%;
-    height: 42pt;
-    padding: 0 10px 0 10px;
-    background-color: #0094ff;
-
+    width: max-content;
+    padding: 0 20px 0 12.5px;
+    margin: 5pt 0 0 0;
+    background-color: #5170d6;
+    border-radius: 10px;
+}
+div.projTitle:hover {
+        background-color: #294bba;
 }
 div.projDesc {
     font-size: 18pt;
@@ -133,15 +136,8 @@ div.textBox {
 div.bottomBar {
     z-index: 3;
     position: absolute;
-    height: 50px;
+    height: 40px;
     width: 100%;
-    background: #262626;
-}
-div.discord {
-    position: relative;
-    height: 75%;
-    top: 12.5%;
-    left: calc(95% - 100px);
 }
 @keyframes fadeInOut {
     0% {top: 20%; opacity: 0%;}
