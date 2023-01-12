@@ -128,7 +128,7 @@ a {
 }
 .bottomBar {
     position: absolute;
-    width: 100vw;
+    width: 60vw;
     z-index: 3;
     height: 80pt;
     left: 10vw;
