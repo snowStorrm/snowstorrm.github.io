@@ -1,3 +1,7 @@
+:root {
+    --projectBoxHeight: 0;
+    --aboutBoxHeight: 0;
+}
 html, body {
     margin: 0;
     padding: 0;
@@ -38,11 +42,11 @@ h1 {
     animation-duration: 6s;
     animation-iteration-count: infinite;
 }
-img.scroll {
+.scroll {
     position: absolute;
-    width: 2.5%;
+    width: 50px;
     top: 87.5%;
-    left: calc(50% - 1.25%);
+    left: calc(50% - 25px);
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -69,76 +73,67 @@ img.scroll {
     left: calc(50% + 5px);
     animation-delay: 3.75s;
 }
-div.box {
+.box {
     position: absolute;
-    display: inline-block;
-    width: 97.5%;
-    background: #262626;
-    z-index: 3;
-    margin: 1.25%;
-    border-radius: 25px;
-    padding: 10px 0 10px 0;
-    filter: drop-shadow(0 0 5px #262626);
-}
-div.boxTitle {
-    font-family: Poppins, sans-serif;
-    font-weight: 800;
-    letter-spacing: 3px;
-    font-size: 64pt;
-    position: relative;
-    color: white;
     width: min-content;
-    left: 5%;
-    top: 15px;
+    height: auto;
+    z-index: 3;
+    background-color: #262626;
+    left: 10vw;
+    padding: 10pt;
+    padding-bottom: 35pt;
+    border-radius: 20pt;
 }
-div.projBox {
-    position: inherit;
-    left: 5%;
-    width: 67%;
+.title {
     font-family: Poppins, sans-serif;
-}
-div.projTitle {
-    font-size: 42pt;
+    font-size: 48pt;
     color: white;
-    width: max-content;
-    padding: 0 20px 0 12.5px;
-    margin: 5pt 0 0 0;
-    background-color: #5170d6;
-    border-radius: 10px;
-}
-div.projTitle:hover {
-        background-color: #294bba;
-}
-div.projDesc {
-    font-size: 18pt;
-    color: #cccccc;
-    width: 75%;
-    height: 100%;
 
 }
-img.projImg {
-    height: 75%;
-    position: inherit;
-    float: right;
-    transform: translate(0, calc(-75%/2));
-    top: 50%;
-    left: 100%;
+.title2 {
+    text-decoration: none;
+    background-color: #7e4ead;
+    font-family: inherit;
+    color: inherit;
+    font-size: 32pt;
+    width: max-content;
+    border-radius: 10pt;
+    padding: 5pt;
+    transition: background-color .5s;
 }
-div.textBox {
-    position: relative;
+a {
+    text-decoration: none;
+    color: white;
+}
+.title2:hover {
+    background-color: #451a70;
+    transition: background-color .5s;
+}
+.paragraph {
     font-family: Poppins, sans-serif;
-    text-indent: 5%;
-    font-size: 18pt;
-    color: #cccccc;
-    left: 7.5%;
-    width: 85%;
+    color: white;
+    font-size: 16pt;
 }
-div.bottomBar {
-    z-index: 3;
+.projectItem {
+    font-family: Poppins, sans-serif;
+    color: white;
+    width: 60vw;
+}
+.projectImage {
     position: absolute;
-    height: 40px;
-    width: 100%;
+    max-width: 300px;
+    height: 50%;
+    left: 80%;
+    top: 37.5%;
 }
+.bottomBar {
+    position: absolute;
+    width: 100vw;
+    z-index: 3;
+    height: 80pt;
+    left: 10vw;
+}
+
 @keyframes fadeInOut {
     0% {top: 20%; opacity: 0%;}
     25% {top: 20%; opacity: 0%;}

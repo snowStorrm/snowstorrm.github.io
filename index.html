@@ -10,37 +10,37 @@
     <title>snow's playground</title>
 </head>
 <body>
+    <script src="src/vecfield.js"></script>
     <h1 class="snow">snow</h1>
     <h1 class="storrm">storrm</h1>
     <h1 class="ryan">ryan</h1>
     <h1 class="zucker">zucker</h1>
-    <script src="src/vecfield.js"></script>
-    <div class="box" style="top: 110%; height: 475px; width: 80%">
-        <div class="boxTitle">projects</div>
-        <div class="projBox" style="top:calc(15px + 125px)">
-            <a href="projects/project-processor" style="text-decoration: none;">
-                <div class="projTitle">Project: Processor</div>
+    <img id="arrow" class="scroll" src="src/img/dwn.png" />
+    <div id="projectBox" class="box" style="top: 110%;">
+        <div class="title">projects</div>
+        <div class="projectItem">
+            <a href="projects/project-processor">
+                <div class="title2">Project: Processor</div>
             </a>
-            <div class="projDesc">(v 0.1a) A number-go-up incremental game focused on harvesting data. Inspired by other incremental games like Incremental Mass and Antimatter Dimensions.</div>
-            <img class="projImg" src="src/img/q.png" />
+            <div class="paragraph" style="width: 67%">A browser-based incremental game based on data harvesting. Loosely inspired by Calculator Evolution and Incremental Mass.</div>
+            <img class="projectImage" src="src/img/q.png" />
         </div>
     </div>
-    <div class="box" style="top: calc(110% + 475px + 10%); height: 575px; width: 80%; margin-left: 18.75%">
-        <div class="boxTitle">about</div>
-        <div class="textBox" style="top:calc(15px);">
-            Hello there! My name is snowStorrm, but in the real world I go by Ryan. I'm a high school student with a background in mathematics and writing, and I have a profound interest in the creative industry. This website is my personal sandbox, full of various projects and thoughts I've had over time. With that, go take a peek at what's happening in my corner!
-        </div>
-        <div class="textBox" style="top:calc(30px)">
-            A note for those interested in the code behind my projects: libraries produced for my projects are all open-source and licensed under the MIT license for your free use.
-        </div>
+    <div id="aboutBox" class="box" style="top: calc(110% + var(--projectBoxHeight) + 120px); width: 60vw; left: 25vw">
+        <div class="title">about me</div>
+        <div class="paragraph" style="text-indent: 35pt">Hello there! My name is snowStorrm, but in the real world I go by Ryan. I'm a high school junior with an interest in design and media creation. This website is my personal playground, full of random ideas and projects I've worked on. Go take a peek!</div>
+        <div class="paragraph" style="text-indent: 35pt">All of the libraries behind my showcased projects (not the projects themselves) are licensed under the MIT license for your free use. Contributions to any of my GitHub repositories are greatly appreciated but never required or asked for.</div>
     </div>
-    <div class="bottomBar" style="top: calc(110% + 475px + 575px + 25%); opacity: 0.85;">
-        <a href="https://github.com/snowstorrm">
-            <img style="position: relative; height: 21pt; top: calc(50% - 14pt); left: 2pt;" src="src/img/github-mark-white.svg"/>
+    <script>
+        document.querySelector(':root').style.setProperty('--projectBoxHeight', document.getElementById('projectBox').getBoundingClientRect().height + 'px');
+        document.querySelector(':root').style.setProperty('--aboutBoxHeight', document.getElementById('aboutBox').getBoundingClientRect().height + 'px');
+    </script>
+    <div class="bottomBar" style="top: calc(110% + var(--projectBoxHeight) + var(--aboutBoxHeight) + 245px + 27.5pt);">
+        <a style="position: absolute; height: 50%; top: 50%; left: 7.5pt;" href="https://github.com/snowStorrm">
+            <img style="height: 100%" src="src/img/github-mark-white.svg"/>
         </a>
-        <img style="position: absolute; height: 15pt; top: calc(50% - 7.5pt); left: calc(100% - 30px)" src="src/img/icon_clyde_white.svg" />
-        <div style="position: absolute; font-family: Poppins; left: calc(90% - 50px); top: calc(50% - 8pt); font-size: 12pt; color: #ffffff; text-align: right;">snowStorrm#1312</div>
+        <img style="position: absolute; height: 50%; top: 50%; left: calc(7.5pt + 65pt); " src="src/img/icon_clyde_white.svg"/>
+        <div style="font-family: Poppins, sans-serif; font-size: 18pt; color: white; position: absolute; left: calc(7.5pt + 65pt + 55pt); top: calc(50% + 6pt)">snowStorrm#1312</div>
     </div>
-    <img id="arrow" class="scroll" src="src/img/dwn.png"/>
 </body>
 </html>
